@@ -17,6 +17,8 @@ func get_input():
 		motion.y += 1
 		
 	motion = motion.normalized() * SPEED
+	if Input.is_action_pressed('ui_select'):
+		var temp = 1
 
 func _physics_process(delta):
 	get_input()
