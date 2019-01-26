@@ -34,7 +34,7 @@ shape = SubResource( 1 )
 position = Vector2( -145, -149 )
 anchor_mode = 1
 rotating = false
-current = false
+current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
@@ -54,10 +54,16 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit", "Offset" ]
 
 [node name="icon" type="Sprite" parent="." index="1"]
 
 position = Vector2( 600, 185 )
+texture = ExtResource( 2 )
+
+[node name="icon2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 218, 344 )
 texture = ExtResource( 2 )
 
 
