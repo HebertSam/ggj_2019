@@ -26,6 +26,4 @@ func _physics_process(delta):
 	if global_position.y < 0:
 		global_position.y = 0;
 	var projectResolution = get_viewport().size
-	#$Camera2D.offset.x = global_position.x;
-	#$Camera2D.offset.y = global_position.y;
 	
