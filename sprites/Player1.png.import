@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wolf1.png-18265b99de4da4c625ce04cd14db449f.stex"
+path="res://.import/Player1.png-aba1c77f1a46ff6a742175316a7d6202.stex"
 
 [deps]
 
-source_file="res://sprites/Wolf1.png"
-source_md5="4276e21dac6854b55a414cb4f13edecb"
+source_file="res://sprites/Player1.png"
+source_md5="8b06967e1220e8770bfe70df1fe789a8"
 
-dest_files=[ "res://.import/Wolf1.png-18265b99de4da4c625ce04cd14db449f.stex" ]
-dest_md5="d20c46cffd0004af86dd486945474707"
+dest_files=[ "res://.import/Player1.png-aba1c77f1a46ff6a742175316a7d6202.stex" ]
+dest_md5="f2d9353cce12782a3780d79cd5e08f02"
 
 [params]
 
