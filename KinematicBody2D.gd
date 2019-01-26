@@ -9,13 +9,18 @@ func get_input():
 	motion = Vector2()
 	if Input.is_action_pressed('ui_right'):
 		motion.x += 1
+		$Sprite.play('walk')
 	if Input.is_action_pressed('ui_left'):
 		motion.x -= 1
+		$Sprite.play('walk')
 	if Input.is_action_pressed('ui_up'):
 		motion.y -= 1
+		$Sprite.play('walk')
 	if Input.is_action_pressed('ui_down'):
 		motion.y += 1
-		
+		$Sprite.play('walk')
+	
+	
 	motion = motion.normalized() * SPEED
 	if Input.is_action_pressed('ui_select'):
 		var temp = 1

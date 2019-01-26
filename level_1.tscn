@@ -1,7 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Wolf2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Wolf3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Wolf1.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,9 +32,9 @@ extents = Vector2( 10, 10 )
 
 [node name="level_1" type="Node" index="0"]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+[node name="player" type="KinematicBody2D" parent="." index="0"]
 
-position = Vector2( 145, 149 )
+position = Vector2( 239.044, 270.609 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -26,17 +43,20 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable" ]
 SPEED = 5
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D" index="0"]
+[node name="Sprite" type="AnimatedSprite" parent="player" index="0"]
 
-texture = ExtResource( 2 )
+frames = SubResource( 3 )
+animation = "idle"
+playing = true
+_sections_unfolded = [ "Material" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" index="1"]
 
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D" index="2"]
+[node name="Camera2D" type="Camera2D" parent="player" index="2"]
 
-position = Vector2( -145, -149 )
+position = Vector2( 2.68481, -1.31525 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -64,12 +84,12 @@ _sections_unfolded = [ "Limit", "Offset" ]
 [node name="icon" type="Sprite" parent="." index="1"]
 
 position = Vector2( 600, 184.265 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 
 [node name="icon2" type="Sprite" parent="." index="2"]
 
 position = Vector2( 218, 344 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
 
@@ -89,6 +109,21 @@ shape = SubResource( 2 )
 
 position = Vector2( 427.918, 127.648 )
 scale = Vector2( 0.612609, 0.612609 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="icon3" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 2.44209, 3.14976 )
+texture = ExtResource( 5 )
 
 
