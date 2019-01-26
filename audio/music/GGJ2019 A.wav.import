@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GGJ2019 A.wav-3cc9b9e1baa2d69c366bc99efc3e750c.sample"
+
+[deps]
+
+source_file="res://audio/music/GGJ2019 A.wav"
+dest_files=[ "res://.import/GGJ2019 A.wav-3cc9b9e1baa2d69c366bc99efc3e750c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
