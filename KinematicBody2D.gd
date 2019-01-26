@@ -28,9 +28,19 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_collide(motion)
+	
 	if global_position.x < 0:
 		global_position.x = 0;
 	if global_position.y < 0:
 		global_position.y = 0;
 	var projectResolution = get_viewport().size
 	
+
+
+func _on_Area2D_area_entered(area):
+	print('hello ' + area)
+
+
+func _on_Area2D_body_entered(body):
+	print(body)
+	pass # replace with function body
