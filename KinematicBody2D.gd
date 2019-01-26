@@ -6,18 +6,22 @@ var motion = Vector2()
 
 
 func get_input():
+	var moved = false;
 	if Input.is_action_pressed('ui_right'):
 		motion.x += 1
+		moved = true;
 
-	elif Input.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left'):
 		motion.x -= 1
-	
-	elif Input.is_action_pressed('ui_up'):
+		moved = true;
+	if Input.is_action_pressed('ui_up'):
 		motion.y -= 1
-	elif Input.is_action_pressed('ui_down'):
+		moved = true;
+	if Input.is_action_pressed('ui_down'):
 		motion.y += 1
+		moved = true;
 		
-	else:
+	if !moved:
 		motion.x = 0
 		motion.y = 0
 		
