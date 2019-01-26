@@ -12,7 +12,7 @@ extents = Vector2( 35, 29 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
-position = Vector2( 145, 149 )
+position = Vector2( 143, 149 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -33,5 +33,41 @@ texture = ExtResource( 2 )
 
 position = Vector2( 117, 83 )
 shape = SubResource( 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="music 1" type="AudioStreamPlayer" parent="Music" index="0"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Sound Effects" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="sfx1" type="AudioStreamPlayer" parent="Sound Effects" index="0"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 
