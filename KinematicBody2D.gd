@@ -23,3 +23,7 @@ func _physics_process(delta):
 	move_and_collide(motion)
 	if global_position.x < 0:
 		global_position.x = 0;
+	if global_position.y < 0:
+		global_position.y = 0;
+	$Camera2D.offset.x = global_position.x;
+	$Camera2D.offset.y = global_position.y;
