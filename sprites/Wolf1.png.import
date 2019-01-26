@@ -7,10 +7,7 @@ path="res://.import/Wolf1.png-18265b99de4da4c625ce04cd14db449f.stex"
 [deps]
 
 source_file="res://sprites/Wolf1.png"
-source_md5="4276e21dac6854b55a414cb4f13edecb"
-
 dest_files=[ "res://.import/Wolf1.png-18265b99de4da4c625ce04cd14db449f.stex" ]
-dest_md5="d20c46cffd0004af86dd486945474707"
 
 [params]
 

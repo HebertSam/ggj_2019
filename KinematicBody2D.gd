@@ -19,7 +19,22 @@ func get_input():
 	if Input.is_action_pressed('ui_down'):
 		motion.y += 1
 		$Sprite.play('walk')
-	
+	if motion.x == 1 && motion.y == -1:
+		rotation_degrees = 45
+	elif motion.x == 1 && motion.y == 1:
+		rotation_degrees = 135
+	elif motion.x == -1 && motion.y == -1:
+		rotation_degrees = 315
+	elif motion.x == -1 && motion.y == 1:
+		rotation_degrees = 225
+	elif motion.x == 1:
+		rotation_degrees = 90
+	elif motion.x == -1:
+		rotation_degrees = 270
+	elif motion.y == -1:
+		rotation_degrees = 0
+	elif motion.y == 1:
+		rotation_degrees = 180
 	
 	motion = motion.normalized() * SPEED
 	if Input.is_action_pressed('ui_select'):
