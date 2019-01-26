@@ -19,7 +19,10 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable" ]
-SPEED = 5
+__meta__ = {
+"_edit_group_": true
+}
+SPEED = 10
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D" index="0"]
 
